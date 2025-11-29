@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* ----- Colores -----*/
+:root {
+    --color-principal: #a3223a;
+    --color-fondo: #d1d1d1;
+}
+
+/* ---- Cuerpo ---- */
+body {
+    background-color: var(--color-fondo);
+}
+
+.btn-outline-usbp {
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card h1, .card h2 {
+    color: var(--color-principal);
+}
+
+.boton-usbp {
+    background-color:var(--color-principal);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+.boton-usbp:hover {
+    color:var(--color-principal) !important; 
+    border: 1px solid var(--color-principal) !important;
+    background-color: white !important;
+}

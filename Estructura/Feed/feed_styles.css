@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* ----- Colores -----*/
+:root{
+    --rojo-usbp: #a3223a;
+    --blanco-usbp: #f8f9fa;
+    --gris-fondo-usbp: #d1d1d1;
+    --color-texto: #505050;
+}
+
+/* ---- Cuerpo ---- */
+body{
+    background: var(--gris-fondo-usbp);
+}
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ----- ALBUM PUBLICACIONES -----*/
+.album-publicaciones{
+    background-color: var(--gris-fondo-usbp);
+    padding-bottom: 90px;
+}
+.album-publicaciones h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--blanco-usbp);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    color: var(--color-texto);
+}
+
+
