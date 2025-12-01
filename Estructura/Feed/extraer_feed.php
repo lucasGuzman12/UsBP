@@ -20,6 +20,7 @@ while ($extraer = mysqli_fetch_array($posts)){
     $archivo = $extraer["archivo"];
     $nombre_archivo = $extraer["nombre_archivo"];
     $likes = $extraer["likes"];
+    $vistas = $extraer["vistas"];
 
     //Extraigo el nombre de usuario por el id desde la tabla de usuarios
     $consulta_nombre_usuario = "SELECT username FROM usuarios WHERE id = $id_usuario;";
@@ -64,6 +65,7 @@ while ($extraer = mysqli_fetch_array($posts)){
                 </h3>
                 <p class="card-text">
                     <?php echo $descripcion;?>
+                    <a href="../Feed/Post/post_vista_completa.php?id=<?php echo $id; ?>" style="text-decoration: none; color: #e13050ff"> Ver mas</a>
                 </p>
 
                 <!-- APARTADO DEL ARCHIVO (Verifico si hay archivo o no) -->
@@ -92,6 +94,7 @@ while ($extraer = mysqli_fetch_array($posts)){
                             Like (<span class="like-count"><?php echo $likes; ?></span>)
                         </button>
                     </div>
+                    <small class="text-body-secondary">Visitas: <?php echo $vistas;?></small>
                     <small class="text-body-secondary"><?php echo $hora;?> - <?php echo $fecha;?></small>
                 </div>
             </div>
