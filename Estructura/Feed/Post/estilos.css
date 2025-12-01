@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* ----- Colores -----*/
+:root{
+    --rojo-usbp: #a3223a;
+    --blanco-usbp: #f8f9fa;
+    --gris-fondo-usbp: #d1d1d1;
+    --color-texto: #505050;
+}
+
+/* ---- Cuerpo ---- */
+body{
+    background: var(--gris-fondo-usbp);
+}
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
