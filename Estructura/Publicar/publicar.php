@@ -63,9 +63,13 @@
                 <label for="titulo">Título *</label>
                 <input id="titulo" type="text" name="titulo" placeholder="Escriba el título..." required>
 
-                <!--Descripcion-->
-                <label for="descripcion">Descripción *</label>
-                <textarea id="descripcion" name="descripcion" placeholder="Escriba una descripción..." required></textarea>
+                <!--Sintesis del post-->
+                <label for="descripcion">Breve síntesis del post *</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Escriba una breve síntesis..." required></textarea>
+
+                <!--Contenido del post-->
+                <label for="contenido">Contenido *</label>
+                <textarea id="contenido" name="contenido" placeholder="Escriba el contenido del post..." required></textarea>
 
                 <!--Imagen-->
                 <label for="imagen">Imagen *</label>
