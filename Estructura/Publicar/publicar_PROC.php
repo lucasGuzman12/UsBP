@@ -68,6 +68,7 @@
             //Extraigo los datos del formulario
             $titulo = $_POST["titulo"];
             $descripcion = $_POST["descripcion"];
+            $contenido = $_POST["contenido"];
             $imagen = file_get_contents($_FILES["imagen"]["tmp_name"]);
             //Veo si se cargo un archivo
             $nombre_archivo = "";
@@ -87,24 +88,28 @@
 
             //Defino los likes en 0
             $likes = 0;
+            //Defino las visitas
+            $vistas = 0;
 
             //Inserto el post a la base de datos
             $stmt = $conexion->prepare("
-                INSERT INTO posts(id_usuario, titulo, texto, imagen, fecha, hora, id_tema, archivo, nombre_archivo, likes)
-                VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO posts(id_usuario, titulo, texto, contenido, imagen, fecha, hora, id_tema, archivo, nombre_archivo, likes, vistas)
+                VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ");
             $stmt->bind_param( //Aseguro la consulta y doy los tipos de dato
-                "isssssissi", 
+                "issssssissii", 
                 $id_usuario, 
-                $titulo, 
-                $descripcion, 
+                $titulo,
+                $descripcion,
+                $contenido,
                 $imagen, 
                 $fecha, 
                 $hora, 
                 $id_tema, 
                 $archivo, 
                 $nombre_archivo, 
-                $likes
+                $likes,
+                $vistas
             );
             $stmt->execute(); //Ejecuto la consulta
             $resultado1 = $stmt->affected_rows > 0; //Guardo si el resultado fue correcto o no
